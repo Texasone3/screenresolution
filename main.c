@@ -209,7 +209,7 @@ unsigned int setDisplayToMode(CGDirectDisplayID display, CGDisplayModeRef mode) 
         NSLog(CFSTR("Error: failed CGConfigureDisplayWithDisplayMode err(%u)"), rc);
         return 0;
     }
-    rc = CGCompleteDisplayConfiguration(config, kCGConfigureForSession);
+    rc = CGCompleteDisplayConfiguration(config, kCGConfigurePermanently);
     if (rc != kCGErrorSuccess) {
         NSLog(CFSTR("Error: failed CGCompleteDisplayConfiguration err(%u)"), rc);        
         return 0;
